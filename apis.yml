@@ -3,13 +3,37 @@ url: https://raw.githubusercontent.com/api-evangelist/nasdaq/refs/heads/main/api
 name: Nasdaq
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-description: 'Fortune 1000 company Nasdaq. Public API documentation has not yet been catalogued in the API Evangelist network.'
+description: 'Fortune 1000 company Nasdaq. Public real-time delivery is Apache Kafka via Nasdaq Cloud Data Service (NCDS); modeled here in AsyncAPI 2.6 with kafka bindings.'
 created: '2026-05-05'
-modified: '2026-05-05'
+modified: '2026-05-29'
 specificationVersion: '0.19'
 common:
   - type: GitHubOrganization
     url: https://github.com/Nasdaq
   - type: LinkedIn
     url: https://www.linkedin.com/company/nasdaq
-apis: []
+apis:
+  - name: Nasdaq Cloud Data Service (NCDS) — Kafka Streams
+    description: >
+      Real-time Nasdaq market data delivered over Apache Kafka (TLS) with
+      SASL/OAUTHBEARER authentication against a Keycloak pro-realm token
+      endpoint. Topics documented in the NCDS Java and Python SDKs:
+      GIDS, NLSUTP, NLSCTA, NLSPLUS-UTP-V4, NLSPLUS-CTA-V4, NEWS-PRO-GLOBAL,
+      UTPBIN-UF30. The full topic catalog is product-license-gated and
+      delivered to subscribers during onboarding.
+    humanURL: https://github.com/Nasdaq/NasdaqCloudDataService
+    baseURL: https://streams.ncds.nasdaq.com:9094
+    tags:
+      - Market Data
+      - Kafka
+      - Streaming
+      - Avro
+    properties:
+      - type: GitHub
+        url: https://github.com/Nasdaq/NasdaqCloudDataService
+      - type: SDK
+        url: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Java
+      - type: SDK
+        url: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python
+      - type: AsyncAPI
+        url: https://raw.githubusercontent.com/api-evangelist/nasdaq/refs/heads/main/asyncapi/nasdaq-asyncapi.yml

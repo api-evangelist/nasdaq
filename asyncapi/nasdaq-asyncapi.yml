@@ -1,0 +1,338 @@
+asyncapi: '2.6.0'
+id: 'urn:com:nasdaq:ncds'
+info:
+  title: Nasdaq Cloud Data Service (NCDS) — Kafka Streams
+  version: '1.0.0'
+  description: |
+    AsyncAPI 2.6 description of the Nasdaq Cloud Data Service (NCDS) public
+    delivery surface. NCDS delivers real-time exchange data over Apache Kafka
+    (TLS) using SASL/OAUTHBEARER against a Keycloak `pro-realm` token endpoint.
+    Topic names, the bootstrap server pattern (`{streams_endpoint_url}:9094`),
+    OAuth configuration, the Avro message format, and the supported SDK
+    operations are all sourced verbatim from Nasdaq's official open-source
+    SDK READMEs (Java, Python) and the NCDS REST API repository.
+
+    Topic enumeration is intentionally narrow: only topics that appear by name
+    in the official Java and Python SDK READMEs are modeled as channels.
+    Nasdaq's onboarding documentation explicitly states the actual set of
+    streams a client may consume is product-license-gated — quote:
+    "This sample code only connects to one topic (NLSPLUS-CTA-V4); during
+    on-boarding process, you will receive a topic list that you're entitled
+    to." For that reason a generic `{topic}` channel is also exposed to
+    represent any entitlement-gated stream whose name is not enumerated in
+    public docs (e.g. Nasdaq Basic, TotalView, OTC Markets, Options product
+    families referenced but not named as Kafka topics in the public SDKs).
+  contact:
+    name: Nasdaq Cloud Data Service
+    url: https://github.com/Nasdaq/NasdaqCloudDataService
+  license:
+    name: Nasdaq Cloud Data Service — commercial entitlement required
+    url: https://www.nasdaq.com/solutions/data/nasdaq-data-link
+  x-apievangelist-source:
+    - https://github.com/Nasdaq/NasdaqCloudDataService
+    - https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Java
+    - https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python
+    - https://github.com/Nasdaq/NasdaqCloudDataService-REST-API
+
+defaultContentType: application/vnd.apache.avro+binary
+
+servers:
+  production:
+    url: '{streamsEndpointUrl}:9094'
+    protocol: kafka-secure
+    protocolVersion: '2.8'
+    description: |
+      NCDS Apache Kafka broker. The host portion (`{streamsEndpointUrl}`) is
+      issued during onboarding; the port is fixed at 9094. Transport is TLS
+      with SASL/OAUTHBEARER authentication. Sourced verbatim from the SDK
+      kafka-config.json template: `bootstrap.servers={streams_endpoint_url}:9094`.
+    variables:
+      streamsEndpointUrl:
+        default: streams.ncds.nasdaq.com
+        description: |
+          Tenant-specific NCDS Kafka bootstrap hostname provided by Nasdaq
+          during onboarding. The default shown here is a placeholder — the
+          actual host is delivered by Nasdaq.
+    security:
+      - ncdsOAuth: []
+    bindings:
+      kafka:
+        schemaRegistryUrl: 'https://{auth_endpoint_url}/schema-registry'
+        schemaRegistryVendor: 'confluent'
+        bindingVersion: '0.4.0'
+    tags:
+      - name: kafka
+      - name: tls
+      - name: sasl_ssl
+
+channels:
+  GIDS:
+    description: |
+      Global Index Data Service (GIDS). Real-time index values and
+      constituent updates published by Nasdaq. Topic name `GIDS` is
+      enumerated verbatim in both the Java and Python SDK READMEs as one
+      of the example streams returned by the `TOPICS` operation.
+    bindings:
+      kafka:
+        topic: GIDS
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeGIDS
+      summary: Consume Global Index Data Service messages.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+  NLSUTP:
+    description: |
+      Nasdaq Last Sale Plus — UTP tape. Real-time last-sale data for
+      securities on the UTP (Unlisted Trading Privileges) tape. Topic
+      name `NLSUTP` appears verbatim in the Java SDK README example
+      commands and TOPICS output.
+    bindings:
+      kafka:
+        topic: NLSUTP
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeNLSUTP
+      summary: Consume NLS+ UTP-tape last-sale messages.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+  NLSCTA:
+    description: |
+      Nasdaq Last Sale Plus — CTA tape. Real-time last-sale data for
+      securities on the CTA (Consolidated Tape Association) tape. Topic
+      name `NLSCTA` appears verbatim in the Java SDK README example
+      commands and TOPICS output.
+    bindings:
+      kafka:
+        topic: NLSCTA
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeNLSCTA
+      summary: Consume NLS+ CTA-tape last-sale messages.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+  NLSPLUS-UTP-V4:
+    description: |
+      Nasdaq Last Sale Plus, v4 schema, UTP tape. Topic name
+      `NLSPLUS-UTP-V4` is enumerated verbatim in the Python SDK README as
+      one of the streams returned by the TOPICS operation.
+    bindings:
+      kafka:
+        topic: NLSPLUS-UTP-V4
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeNLSPLUSUTPV4
+      summary: Consume NLS+ v4 UTP-tape messages.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+  NLSPLUS-CTA-V4:
+    description: |
+      Nasdaq Last Sale Plus, v4 schema, CTA tape. Topic name
+      `NLSPLUS-CTA-V4` is the canonical sample topic used throughout the
+      Python SDK README (`This sample code only connects to one topic
+      (NLSPLUS-CTA-V4)`).
+    bindings:
+      kafka:
+        topic: NLSPLUS-CTA-V4
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeNLSPLUSCTAV4
+      summary: Consume NLS+ v4 CTA-tape messages.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+  NEWS-PRO-GLOBAL:
+    description: |
+      Nasdaq News — Pro Global feed. Topic name `NEWS-PRO-GLOBAL` is
+      enumerated verbatim in the Java SDK README. Consumed via the SDK
+      `NEWS` operation in addition to the standard Kafka subscribe pattern.
+    bindings:
+      kafka:
+        topic: NEWS-PRO-GLOBAL
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeNEWSPROGLOBAL
+      summary: Consume Nasdaq News Pro Global messages.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+  UTPBIN-UF30:
+    description: |
+      UTP Binary, UF30 schema. Topic name `UTPBIN-UF30` is enumerated
+      verbatim in the Java SDK README. UTP Binary is the binary
+      distribution variant of the UTP feed.
+    bindings:
+      kafka:
+        topic: UTPBIN-UF30
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeUTPBINUF30
+      summary: Consume UTP Binary UF30 messages.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+  '{entitledTopic}':
+    description: |
+      Generic NCDS Kafka topic placeholder. NCDS publishes additional
+      product families (Nasdaq Basic, TotalView, OTC Markets, Options,
+      and others) that are referenced in Nasdaq's SDKs and onboarding
+      material but whose Kafka topic names are not enumerated in the
+      public SDK READMEs because the topic catalog is product-license-
+      gated. Per the Python SDK README: "during on-boarding process, you
+      will receive a topic list that you're entitled to." Substitute the
+      entitled topic name issued by Nasdaq at onboarding into the
+      `entitledTopic` parameter.
+    parameters:
+      entitledTopic:
+        description: Entitlement-gated NCDS Kafka topic name issued by Nasdaq.
+        schema:
+          type: string
+    bindings:
+      kafka:
+        bindingVersion: '0.4.0'
+    subscribe:
+      operationId: subscribeEntitledTopic
+      summary: Consume any entitlement-gated NCDS topic.
+      bindings:
+        kafka:
+          bindingVersion: '0.4.0'
+      message:
+        $ref: '#/components/messages/NcdsAvroMessage'
+
+components:
+  messages:
+    NcdsAvroMessage:
+      name: NcdsAvroMessage
+      title: NCDS Apache Avro Message
+      summary: |
+        Generic NCDS Kafka record envelope. Per the SDK READMEs the SCHEMA
+        operation "returns the schema for the stream in Apache Avro format."
+        Per-topic Avro schemas are retrieved at runtime from the SDK
+        SCHEMA operation or the Confluent-compatible Schema Registry
+        bound to the broker; they are not published as static files in
+        the public NCDS GitHub organization.
+      contentType: application/vnd.apache.avro+binary
+      schemaFormat: 'application/vnd.apache.avro+json;version=1.9.0'
+      bindings:
+        kafka:
+          key:
+            type: string
+            description: Kafka record key (typically the instrument symbol).
+          bindingVersion: '0.4.0'
+      payload:
+        $ref: '#/components/schemas/NcdsAvroEnvelope'
+
+  schemas:
+    NcdsAvroEnvelope:
+      type: object
+      description: |
+        Documented NCDS record envelope fields. The Java SDK README and
+        sample output show every NCDS message carries (at minimum) these
+        fields, populated from the underlying SoupBinTCP-derived feed:
+        `SoupPartition`, `SoupSequence`, `msgType`, and `timeStamp`.
+        Product-specific payload fields are layered on top per topic and
+        are resolved from the Schema Registry / SDK SCHEMA operation at
+        runtime.
+      properties:
+        SoupPartition:
+          type: integer
+          description: SoupBinTCP partition identifier for the source feed.
+        SoupSequence:
+          type: integer
+          format: int64
+          description: SoupBinTCP monotonic sequence number within the partition.
+        msgType:
+          type: string
+          description: |
+            Product-specific message type discriminator (e.g. a single
+            character or short code defined by the underlying NLS / GIDS /
+            UTP feed specification).
+        timeStamp:
+          type: string
+          format: date-time
+          description: Exchange-side event timestamp.
+      required:
+        - SoupPartition
+        - SoupSequence
+        - msgType
+        - timeStamp
+
+  securitySchemes:
+    ncdsOAuth:
+      type: oauth2
+      description: |
+        SASL/OAUTHBEARER against the Nasdaq Keycloak `pro-realm` token
+        endpoint. Sourced verbatim from the SDK kafka-config.json template:
+
+          oauth.token.endpoint.uri=https://{auth_endpoint_url}/auth/realms/pro-realm/protocol/openid-connect/token
+          oauth.client.id=client
+          oauth.client.secret=client-secret
+          oauth.username.claim=preferred_username
+
+        Demo and production realms exist; production is `pro-realm`. The
+        Kafka client obtains an access token from this endpoint via the
+        OAuth 2.0 client_credentials grant and presents it on the SASL
+        OAUTHBEARER handshake to the broker on port 9094.
+      flows:
+        clientCredentials:
+          tokenUrl: 'https://{auth_endpoint_url}/auth/realms/pro-realm/protocol/openid-connect/token'
+          scopes: {}
+
+  operationTraits:
+    ncdsSdkOperations:
+      description: |
+        The NCDS Java and Python SDKs expose Kafka consumption through a
+        fixed verb set rather than ad-hoc consumer code. Modeled here as
+        documentation only; AsyncAPI 2.6 does not enumerate them as
+        first-class operations because they are SDK-level conveniences
+        over the standard Kafka subscribe semantics.
+
+        Documented verbs (verbatim from SDK READMEs):
+          - TOP           — "View the top nnn records in the Topic/Stream"
+          - SCHEMA        — "Display the Schema for the topic"
+          - METRICS       — "Display the Metrics for the topic"
+          - TOPICS        — "List of streams available on Nasdaq Cloud DataService"
+          - GETMSG        — "Get one example message for the given message name"
+          - CONTSTREAM    — "Retrieve continuous stream"
+          - FILTERSTREAM  — "Retrieve continuous stream filtered by symbols/msgtypes"
+          - NEWS          — Consume the NEWS-PRO-GLOBAL feed
+          - HELP          — Documentation access
+
+tags:
+  - name: ncds
+    description: Nasdaq Cloud Data Service
+  - name: kafka
+    description: Apache Kafka transport
+  - name: avro
+    description: Apache Avro message format
+  - name: oauth2
+    description: SASL/OAUTHBEARER via Keycloak pro-realm
+
+externalDocs:
+  description: NCDS umbrella repository
+  url: https://github.com/Nasdaq/NasdaqCloudDataService
