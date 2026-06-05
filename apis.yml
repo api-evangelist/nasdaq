@@ -1,4 +1,6 @@
 aid: nasdaq
+tags:
+  - Fortune 1000
 url: https://raw.githubusercontent.com/api-evangelist/nasdaq/refs/heads/main/apis.yml
 name: Nasdaq
 type: Index
