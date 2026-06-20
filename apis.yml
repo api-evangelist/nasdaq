@@ -4,7 +4,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/nasdaq/refs/heads/main/apis.yml
 name: Nasdaq
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 description: 'Fortune 1000 company Nasdaq. Public real-time delivery is Apache Kafka via Nasdaq Cloud Data Service (NCDS); modeled here in AsyncAPI 2.6 with kafka bindings.'
 created: '2026-05-05'
 modified: '2026-05-29'
