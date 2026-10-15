@@ -1,0 +1,152 @@
+edges:
+- partner_name: ISO 10383 (MIC)
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+  source: mic
+  category: registered trading venues and market segments
+  contract_reference:
+    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
+    spec_file: null
+    standard: ISO 10383
+    role: venue operator
+    matched_domain: nasdaq.com
+    matched_by: domain+verified:nasdaq.com
+    categories:
+    - MLTF
+    - NSPD
+    - RMKT
+    operating_mics:
+    - NSPO
+    - XCSE
+    - XCXD
+    - XNAS
+    - XSTO
+    mics:
+    - mic: XNFI
+      operating_mic: XNAS
+      segment: SGMT
+      market: NASDAQ FIXED INCOME TRADING
+      category: NSPD
+      legal_name: ''
+      country: US
+    - mic: XCXD
+      operating_mic: XCXD
+      segment: OPRT
+      market: NASDAQ CXD
+      category: NSPD
+      legal_name: ''
+      country: CA
+    - mic: NASD
+      operating_mic: XNAS
+      segment: SGMT
+      market: NSDQ DARK
+      category: RMKT
+      legal_name: NASDAQ, INC.
+      country: US
+    - mic: XNMS
+      operating_mic: XNAS
+      segment: SGMT
+      market: NASDAQ GLOBAL MARKET
+      category: RMKT
+      legal_name: NASDAQ, INC.
+      country: US
+    - mic: XNAS
+      operating_mic: XNAS
+      segment: OPRT
+      market: NASDAQ - ALL MARKETS
+      category: RMKT
+      legal_name: NASDAQ, INC.
+      country: US
+    - mic: XNDQ
+      operating_mic: XNAS
+      segment: SGMT
+      market: NASDAQ OPTIONS MARKET
+      category: RMKT
+      legal_name: NASDAQ, INC.
+      country: US
+    - mic: XNGS
+      operating_mic: XNAS
+      segment: SGMT
+      market: NASDAQ GLOBAL SELECT MARKET
+      category: RMKT
+      legal_name: NASDAQ, INC.
+      country: US
+    - mic: XNCM
+      operating_mic: XNAS
+      segment: SGMT
+      market: NASDAQ CAPITAL MARKET
+      category: RMKT
+      legal_name: NASDAQ, INC.
+      country: US
+    - mic: XNIM
+      operating_mic: XNAS
+      segment: SGMT
+      market: NASDAQ INTERMARKET
+      category: RMKT
+      legal_name: ''
+      country: US
+    - mic: XBOS
+      operating_mic: XNAS
+      segment: SGMT
+      market: NASDAQ TEXAS
+      category: RMKT
+      legal_name: NASDAQ, INC.
+      country: US
+    - mic: NSPO
+      operating_mic: NSPO
+      segment: OPRT
+      market: NASDAQ SPOT AB
+      category: NSPD
+      legal_name: ''
+      country: SE
+    - mic: PCSE
+      operating_mic: XCSE
+      segment: SGMT
+      market: NASDAQ COPENHAGEN A/S - PURESTREAM
+      category: RMKT
+      legal_name: NASDAQ COPENHAGEN A/S
+      country: DK
+    - mic: PSTO
+      operating_mic: XSTO
+      segment: SGMT
+      market: NASDAQ STOCKHOLM AB - PURESTREAM
+      category: RMKT
+      legal_name: NASDAQ STOCKHOLM AB
+      country: SE
+    - mic: PFSE
+      operating_mic: XSTO
+      segment: SGMT
+      market: FIRST NORTH SWEDEN - PURESTREAM
+      category: MLTF
+      legal_name: NASDAQ STOCKHOLM AB
+      country: SE
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-15'
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-15'
+- partner_name: Twelve Data
+  partner: twelvedata
+  partner_match: aggregator
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://api.twelvedata.com/exchanges
+  source: twelvedata
+  matched_by: mic:XNAS->domain+verified:nasdaq.com
+  mic: XNAS
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-15'
+  other_mics:
+  - XNGS
+  - XNMS
+  - XNCM
+generated: '2026-10-15'
+method: searched
+checked:
+- https://api.twelvedata.com/exchanges
+- https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
