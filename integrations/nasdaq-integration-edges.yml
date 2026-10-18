@@ -145,8 +145,28 @@ edges:
   - XNGS
   - XNMS
   - XNCM
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/YyXLJTqNRduygW6YYyOPEA
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Nasdaq Boardvantage
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
 generated: '2026-10-15'
 method: searched
 checked:
 - https://api.twelvedata.com/exchanges
 - https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+- zoom/integrations/zoom-integration-edges.yml
+source:
+- zoom/integrations/zoom-integration-edges.yml
