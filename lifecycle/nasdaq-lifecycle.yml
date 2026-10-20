@@ -1,0 +1,7 @@
+name: Nasdaq lifecycle
+generated: '2026-10-19'
+method: searched
+source: https://github.com/Nasdaq/NasdaqCloudDataService-REST-API
+versioning: URI path version (v1, v2); NCDS REST bars endpoints exist in v2.
+deprecation: null
+status_page: https://status.data.nasdaq.com/

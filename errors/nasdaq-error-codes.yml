@@ -1,0 +1,19 @@
+name: Nasdaq Data Link error codes
+generated: '2026-10-19'
+method: searched
+source: https://data.nasdaq.com/tablesapi
+format: custom
+envelope: Nasdaq Data Link code plus HTTP status; bulk download responses carry an errors key and rate_limited_until
+problems:
+- status: 401
+  code: QEAx05
+  title: Unauthorized
+- status: 429
+  code: QEAx06
+  title: You have exceeded your daily call limit as a subscriber
+- status: 202
+  code: QEAx07
+  title: Please try again in 30 seconds
+- status: 500
+  title: Your query will return too many results. Please apply some filters and try again.
+  remediation: append qopts.export=true to your API call

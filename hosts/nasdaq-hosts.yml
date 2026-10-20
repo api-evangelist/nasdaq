@@ -1,0 +1,147 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 11
+  own: 6
+  other_domain: 2
+  platform: 3
+  roles:
+  - api
+  - collections
+  - other
+  - portal
+  - source
+  - status
+  - website
+hosts:
+- host: api.nasdaq.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: nasdaq.com
+  role: api
+  relation: own
+- host: api.nasdaq.com:9094
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: nasdaq.com:9094
+  role: api
+  relation: other-domain
+- host: data.nasdaq.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - DeveloperPortal
+  serves:
+  - api
+  - docs
+  - cdn
+  vendor: imperva
+  registrable_domain: nasdaq.com
+  role: portal
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  - apis[]
+  types:
+  - GitHubOrganization
+  serves:
+  - docs
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: ir.nasdaq.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: nasdaq.com
+  role: other
+  relation: own
+- host: nd.nasdaq.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: nasdaq.com
+  role: other
+  relation: own
+- host: status.data.nasdaq.com
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: nasdaq.com
+  role: status
+  relation: own
+- host: streams.ncds.nasdaq.com:9094
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: nasdaq.com:9094
+  role: other
+  relation: other-domain
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.nasdaq.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Documentation
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: akamai
+  registrable_domain: nasdaq.com
+  role: website
+  relation: own
+- host: www.postman.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Postman
+  serves:
+  - api-collections
+  vendor: postman
+  registrable_domain: postman.com
+  role: collections
+  relation: platform

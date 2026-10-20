@@ -1,0 +1,25 @@
+name: Nasdaq conventions
+generated: '2026-10-19'
+method: searched
+source: https://data.nasdaq.com/tablesapi
+auth: see authentication/nasdaq-authentication.yml
+formats: [json, xml, csv]
+pagination:
+  style: cursor
+  params: [qopts.cursor_id]
+  page_size_max: 10000
+  bulk: qopts.export=true
+sparse_fields:
+  param: qopts.columns
+versioning:
+  style: uri-path
+  evidence: The first part of the URI path specifies the API version, in the format v{version_number} (NCDS REST README)
+idempotency:
+  coverage: na
+  note: All documented operations are reads (GET) apart from token issuance and bulk-download job creation via GET; no write surface.
+reversibility:
+  coverage: na
+  note: Read-only data API.
+dry_run_mode: na
+rate_limit_signaling: 429 with QEAx06; bulk download returns rate_limited_until (UTC). See rate-limits/nasdaq-rate-limits.yml.
+errors: errors/nasdaq-error-codes.yml

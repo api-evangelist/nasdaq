@@ -1,0 +1,4303 @@
+{
+	"info": {
+		"_postman_id": "31933a3b-a308-4b1b-a0a1-cb5b98be3c2f",
+		"name": "NCDS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16347523"
+	},
+	"item": [
+		{
+			"name": "Reference",
+			"item": [
+				{
+					"name": "Symbols",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/symbols",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"symbols"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				},
+				{
+					"name": "Symbol Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/symbol/NDAQ",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"symbol",
+								"NDAQ"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				},
+				{
+					"name": "Indexes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/indexes",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"indexes"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				},
+				{
+					"name": "Index Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/index/NDX",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"index",
+								"NDX"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				},
+				{
+					"name": "Index Participants",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/indexparticipants/NDX",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"indexparticipants",
+								"NDX"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				},
+				{
+					"name": "ETPs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/etps",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"etps"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				},
+				{
+					"name": "ETP Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/etp/QQQ",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"etp",
+								"QQQ"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				},
+				{
+					"name": "Option Contracts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AuthorizationToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BaseURL}}/{{ApiVersionV1}}/reference/contracts/NDAQ",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"{{ApiVersionV1}}",
+								"reference",
+								"contracts",
+								"NDAQ"
+							]
+						},
+						"description": "ReferanceEndPoint"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equities",
+			"item": [
+				{
+					"name": "Nasdaq",
+					"item": [
+						{
+							"name": "Realtime",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/realtime/equities/bars/NDAQ/1minute/false/1d",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"false",
+												"1d"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1day)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/realtime/equities/bars/NDAQ/1day/false/3m",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1day",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1week)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/realtime/equities/bars/NDAQ/1week/false/1y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1week",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1month)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/realtime/equities/bars/NDAQ/1month/false/5y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1month",
+												"false",
+												"1y"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Delayed",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/delayed/equities/bars/NDAQ/1minute/false/1d",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"false",
+												"1d"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1day)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/delayed/equities/bars/NDAQ/1day/false/3m",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1day",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1week)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/delayed/equities/bars/NDAQ/1week/false/1y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1week",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1month)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/nasdaq/delayed/equities/bars/NDAQ/1month/false/5y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"nasdaq",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1month",
+												"false",
+												"1y"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "BX",
+					"item": [
+						{
+							"name": "Realtime",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5sec)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/bars/NDAQ/5second/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5second",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/bars/NDAQ/1minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/realtime/equities/bars/NDAQ/5minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Delayed",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5sec)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/bars/NDAQ/5second/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5second",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/bars/NDAQ/1minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/bx/delayed/equities/bars/NDAQ/5minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"bx",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "PSX",
+					"item": [
+						{
+							"name": "Realtime",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5sec)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/bars/NDAQ/5second/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5second",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/bars/NDAQ/1minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/realtime/equities/bars/NDAQ/5minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Delayed",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5sec)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/bars/NDAQ/5second/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5second",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/bars/NDAQ/1minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (5min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/psx/delayed/equities/bars/NDAQ/5minute/2022-08-26T09:30/2022-08-26T10:00",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"psx",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"5minute",
+												"2022-08-26T09:30",
+												"2022-08-26T10:00"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "CQT",
+					"item": [
+						{
+							"name": "Realtime",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/realtime/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/realtime/equities/bars/NDAQ/1minute/false/1d",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"false",
+												"1d"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1day)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/realtime/equities/bars/NDAQ/1day/false/3m",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1day",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1week)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/realtime/equities/bars/NDAQ/1week/false/1y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1week",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1month)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/realtime/equities/bars/NDAQ/1month/false/5y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"realtime",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1month",
+												"false",
+												"1y"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Delayed",
+							"item": [
+								{
+									"name": "Last Sale",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/lastsale/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"lastsale",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Trade",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/lasttrade/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"lasttrade",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Last Quote",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/lastquote/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"lastquote",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Snapshot",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/snapshot/NDAQ",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"snapshot",
+												"NDAQ"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (All)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/trends",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"trends"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Gainers)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/trends/gainers",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"trends",
+												"gainers"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Decliners)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/trends/decliners",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"trends",
+												"decliners"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/trends/mostactivebyvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebyvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Trends (Most Active By Dollar Volume)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV1}}/cqt/delayed/equities/trends/mostactivebydollarvolume",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV1}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"trends",
+												"mostactivebydollarvolume"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1min)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/delayed/equities/bars/NDAQ/1minute/false/1d",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1minute",
+												"false",
+												"1d"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1day)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/delayed/equities/bars/NDAQ/1day/false/3m",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1day",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1week)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/delayed/equities/bars/NDAQ/1week/false/1y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1week",
+												"false",
+												"1m"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								},
+								{
+									"name": "Bars (1month)",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{AuthorizationToken}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{BaseURL}}/{{ApiVersionV2}}/cqt/delayed/equities/bars/NDAQ/1month/false/5y",
+											"host": [
+												"{{BaseURL}}"
+											],
+											"path": [
+												"{{ApiVersionV2}}",
+												"cqt",
+												"delayed",
+												"equities",
+												"bars",
+												"NDAQ",
+												"1month",
+												"false",
+												"1y"
+											]
+										},
+										"description": "ReferanceEndPoint"
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Indexes",
+			"item": [
+				{
+					"name": "Realtime",
+					"item": [
+						{
+							"name": "Value",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/indexes/value/NDX",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"realtime",
+										"indexes",
+										"value",
+										"NDX"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Snapshot",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/indexes/snapshot/NDX",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"realtime",
+										"indexes",
+										"snapshot",
+										"NDX"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delayed",
+					"item": [
+						{
+							"name": "Value",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/indexes/value/NDX",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"delayed",
+										"indexes",
+										"value",
+										"NDX"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Snapshot",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/indexes/snapshot/NDX",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"delayed",
+										"indexes",
+										"snapshot",
+										"NDX"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ETPs",
+			"item": [
+				{
+					"name": "Realtime",
+					"item": [
+						{
+							"name": "Value",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/etps/value/QXV",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"realtime",
+										"etps",
+										"value",
+										"QXV"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Snapshot",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/etps/snapshot/QXV",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"realtime",
+										"etps",
+										"snapshot",
+										"QXV"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delayed",
+					"item": [
+						{
+							"name": "Value",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/etps/value/QXV",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"delayed",
+										"etps",
+										"value",
+										"QXV"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Snapshot",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/indexes/snapshot/QXV",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"delayed",
+										"indexes",
+										"snapshot",
+										"QXV"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Options",
+			"item": [
+				{
+					"name": "Realtime",
+					"item": [
+						{
+							"name": "Chain",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/options/chain/NDAQ",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"realtime",
+										"options",
+										"chain",
+										"NDAQ"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Prices",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/realtime/options/prices/NDAQ  220819C00080000",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"realtime",
+										"options",
+										"prices",
+										"NDAQ  220819C00080000"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delayed",
+					"item": [
+						{
+							"name": "Chain",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/options/chain/NDAQ",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"delayed",
+										"options",
+										"chain",
+										"NDAQ"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						},
+						{
+							"name": "Prices",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{AuthorizationToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{BaseURL}}/{{ApiVersionV1}}/nasdaq/delayed/options/prices/NDAQ  220617P00185000",
+									"host": [
+										"{{BaseURL}}"
+									],
+									"path": [
+										"{{ApiVersionV1}}",
+										"nasdaq",
+										"delayed",
+										"options",
+										"prices",
+										"NDAQ  220617P00185000"
+									]
+								},
+								"description": "ReferanceEndPoint"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authenticate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"AuthorizationToken\", pm.response.json().access_token)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n    \"client_id\": \"fake_id\",\n    \"client_secret\": \"fake_secret\"\n}"
+				},
+				"url": {
+					"raw": "{{BaseURL}}/{{ApiVersionV1}}/auth/token",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"{{ApiVersionV1}}",
+						"auth",
+						"token"
+					]
+				},
+				"description": "Authentication\n"
+			},
+			"response": []
+		}
+	]
+}

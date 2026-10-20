@@ -1,6 +1,15 @@
 aid: nasdaq
 tags:
+- Data Marketplace
+- Financial Data
 - Fortune 1000
+- Kafka
+- Market Data
+- Stock Exchange
+- Streaming
+- Financial Services
+- Capital Markets
+- Economics
 url: https://raw.githubusercontent.com/api-evangelist/nasdaq/refs/heads/main/apis.yml
 name: Nasdaq
 type: Index
@@ -27,26 +36,65 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nasdaq.png
-description: Fortune 1000 company Nasdaq. Public real-time delivery is Apache Kafka via Nasdaq Cloud Data
-  Service (NCDS); modeled here in AsyncAPI 2.6 with kafka bindings.
+description: 'Nasdaq, Inc. operates the Nasdaq stock exchanges and sells market data, index, and financial technology products. Its developer
+  surface is Nasdaq Data Link (data.nasdaq.com): a Tables API (REST, api_key, JSON/XML/CSV, 10,000-row pages with cursor and bulk export), a Bulk
+  Download API, a request-based REST API for real-time and delayed equities, indexes, ETPs and options (Nasdaq Cloud Data Service, OAuth client-credentials,
+  customer-specific base URL), and a Kafka-based Streaming API delivered through first-party Java and Python SDKs.'
 created: '2026-05-05'
-modified: '2026-09-16'
+modified: '2026-10-19'
 specificationVersion: '0.23'
 common:
+- type: RateLimits
+  url: rate-limits/nasdaq-rate-limits.yml
+- type: Spectral
+  url: rules/nasdaq-asyncapi-spectral-rules.yml
+- type: AsyncAPI
+  url: asyncapi/nasdaq-asyncapi.yml
+- type: Conventions
+  url: conventions/nasdaq-conventions.yml
+- type: Authentication
+  url: authentication/nasdaq-authentication.yml
+- type: Lifecycle
+  url: lifecycle/nasdaq-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/nasdaq-error-codes.yml
+- type: SecurityTxt
+  url: well-known/nasdaq-status-security.txt
+- type: WellKnown
+  url: well-known/nasdaq-well-known.yml
+- type: Hosts
+  url: hosts/nasdaq-hosts.yml
+- type: IntegrationEdges
+  url: integrations/nasdaq-integration-edges.yml
+- type: Vendors
+  url: vendors/nasdaq-vendors.yml
+- type: Packages
+  url: packages/nasdaq-packages.yml
 - type: Website
-  url: https://nasdaq.com:9094
+  url: https://www.nasdaq.com/
 - type: DomainSecurity
   url: security/nasdaq-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/Nasdaq
 - type: LinkedIn
   url: https://www.linkedin.com/company/nasdaq
+- type: DeveloperPortal
+  url: https://data.nasdaq.com/
+- type: Documentation
+  url: https://www.nasdaq.com/products/data/data-link/api
+- type: StatusPage
+  url: https://status.data.nasdaq.com/
+- type: PrivacyPolicy
+  url: https://www.nasdaq.com/privacy-statement
+- type: Postman
+  url: https://www.postman.com/nasdaq
+- type: Documentation
+  url: https://docs.data.nasdaq.com/
 apis:
 - name: Nasdaq Cloud Data Service (NCDS) — Kafka Streams
-  description: 'Real-time Nasdaq market data delivered over Apache Kafka (TLS) with SASL/OAUTHBEARER authentication
-    against a Keycloak pro-realm token endpoint. Topics documented in the NCDS Java and Python SDKs: GIDS,
-    NLSUTP, NLSCTA, NLSPLUS-UTP-V4, NLSPLUS-CTA-V4, NEWS-PRO-GLOBAL, UTPBIN-UF30. The full topic catalog
-    is product-license-gated and delivered to subscribers during onboarding.
+  description: 'Real-time Nasdaq market data delivered over Apache Kafka (TLS) with SASL/OAUTHBEARER authentication against a Keycloak pro-realm
+    token endpoint. Topics documented in the NCDS Java and Python SDKs: GIDS, NLSUTP, NLSCTA, NLSPLUS-UTP-V4, NLSPLUS-CTA-V4, NEWS-PRO-GLOBAL,
+    UTPBIN-UF30. The full topic catalog is product-license-gated and delivered to subscribers during onboarding.
 
     '
   humanURL: https://github.com/Nasdaq/NasdaqCloudDataService
@@ -65,10 +113,50 @@ apis:
     url: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python
   - type: AsyncAPI
     url: https://raw.githubusercontent.com/api-evangelist/nasdaq/refs/heads/main/asyncapi/nasdaq-asyncapi.yml
-x-lifecycle:
-  state: shuttered
-  reason: domain-does-not-resolve
-  observed: '2026-09-27'
-  detail: >-
-    The company's own domain returned no A or AAAA record when probed. This is an observation about the domain, not a request from the company.
-  indexed: false
+  aid: nasdaq:nasdaq-cloud-data-service-ncds-kafka-streams
+- name: Nasdaq Data Link Tables API
+  description: 'REST access to Nasdaq Data Link tabular datasets: GET /api/v3/datatables/{datatable_code}.{format} with row and column filters
+    (qopts.columns), cursor pagination (qopts.cursor_id), metadata, and bulk export (qopts.export=true). Authenticated with an api_key query parameter;
+    anonymous access is rate limited.'
+  humanURL: https://data.nasdaq.com/tablesapi
+  baseURL: https://data.nasdaq.com/api/v3
+  tags:
+  - Market Data
+  - Datasets
+  - REST
+  properties:
+  - type: SDKs
+    url: https://github.com/Nasdaq/data-link-python
+  aid: nasdaq:nasdaq-data-link-tables-api
+- name: Nasdaq Data Link Bulk Download API
+  description: 'Asynchronous bulk download of Nasdaq Data Link tables: GET /api/v1/bulkdownloads/{datatable_code} with row filters returns a job
+    (PENDING, RUNNING, SUCCEEDED...) and file URLs fetched with the X-Api-Token header. Limited to 30 requests per table per day.'
+  humanURL: https://data.nasdaq.com/tablesapi
+  baseURL: https://data.nasdaq.com/api/v1
+  tags:
+  - Market Data
+  - Bulk Data
+  - REST
+  properties: []
+  aid: nasdaq:nasdaq-data-link-bulk-download-api
+- name: Nasdaq Cloud Data Service (NCDS) REST API
+  description: Request-based REST API for real-time and delayed Nasdaq, BX, PSX and CQT equities (last sale, last trade, last quote, snapshot,
+    trends, bars), indexes, ETPs and options chains/prices, plus reference data. OAuth-style client credentials exchanged at POST /v1/auth/token
+    for a bearer token; the base URL is customer-specific and issued during onboarding.
+  humanURL: https://github.com/Nasdaq/NasdaqCloudDataService-REST-API
+  baseURL: https://{base_url}/v1
+  tags:
+  - Market Data
+  - Real-Time
+  - REST
+  properties:
+  - type: GitHub
+    url: https://github.com/Nasdaq/NasdaqCloudDataService-REST-API
+  - type: PostmanCollection
+    url: postman/nasdaq-ncds-rest-postman-collection.json
+  aid: nasdaq:nasdaq-cloud-data-service-ncds-rest-api
+x-enrichment:
+  date: '2026-10-19'
+  status: enriched
+  artifacts_added: 8
+  pass: local-v5

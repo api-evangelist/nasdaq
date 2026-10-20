@@ -1,0 +1,14 @@
+name: Nasdaq pricing
+generated: '2026-10-19'
+method: searched
+source: https://data.nasdaq.com/tablesapi
+audience: developer-api
+pricing_basis: negotiated
+published: false
+plan_count: 0
+note: No public price list found; access tiers (anonymous, free API key, premium subscriber)
+  are named on the Tables API rate-limit section and premium datasets are licensed
+  per database. Source page returns HTTP 404 to plain fetchers but renders in a browser.
+delivery:
+  delivery: managed
+plans: []

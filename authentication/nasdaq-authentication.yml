@@ -1,0 +1,30 @@
+name: Nasdaq authentication
+generated: '2026-10-19'
+method: searched
+source: https://data.nasdaq.com/tablesapi
+docs: https://data.nasdaq.com/tablesapi
+schemes:
+- name: api_key
+  type: apiKey
+  in: query
+  parameter: api_key
+  applies_to: Nasdaq Data Link Tables API
+- name: X-Api-Token
+  type: apiKey
+  in: header
+  parameter: X-Api-Token
+  applies_to: Nasdaq Data Link Bulk Download API
+- name: ncds-client-credentials
+  type: http
+  scheme: bearer
+  token_url: https://<base_url>/v1/auth/token
+  description: POST client_id and client_secret as JSON; response carries access_token
+    and expires_in (seconds).
+  applies_to: NCDS REST API
+- name: ncds-kafka-oauthbearer
+  type: oauth2
+  flow: clientCredentials
+  description: SASL/OAUTHBEARER against an onboarding-issued token endpoint; client
+    ID, client secret, token endpoint and bootstrap servers are issued at onboarding.
+  applies_to: NCDS Streaming (Kafka)
+docs_ncds: https://github.com/Nasdaq/NasdaqCloudDataService-REST-API/blob/main/restapi/authenticate.md

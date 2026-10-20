@@ -1,0 +1,46 @@
+name: Nasdaq packages
+generated: '2026-10-19'
+method: searched
+source: https://pypi.org/pypi/nasdaq-data-link/json
+packages:
+- name: nasdaq-data-link
+  registry: pypi
+  url: https://pypi.org/project/nasdaq-data-link/
+  language: python
+  official: true
+  version: 1.0.4
+  published: '2022-08-29'
+  repository: https://github.com/Nasdaq/data-link-python
+  note: author_email connect@data.nasdaq.com; repo still pushed 2026-09-15 but no PyPI release since 2022.
+- name: NasdaqDataLink
+  registry: cran
+  url: https://cran.r-project.org/package=NasdaqDataLink
+  language: r
+  official: true
+  version: 1.0.0
+  published: '2022-06-22'
+  repository: https://github.com/nasdaq/data-link-r
+- name: NasdaqCloudDataService-SDK-Python
+  registry: github
+  url: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Python
+  language: python
+  official: true
+  version: 0.5.1
+  published: '2025-10-16'
+  note: Version and date from the GitHub latest release; not found as ncdssdk on PyPI.
+- name: NasdaqCloudDataService-SDK-Java
+  registry: github
+  url: https://github.com/Nasdaq/NasdaqCloudDataService-SDK-Java
+  language: java
+  official: true
+  version: 0.9.0
+  published: '2024-05-01'
+  note: Version and date from the GitHub latest release; no Maven Central artifact found (search.maven.org q=ncdssdk returned 0).
+- name: ndlbulkdownload
+  registry: github
+  url: https://github.com/Nasdaq/ndlbulkdownload
+  language: python
+  official: true
+  version: null
+  published: null
+  note: GitHub repository in the Nasdaq org (pushed 2025-04-23); no registry release checked to exist.
