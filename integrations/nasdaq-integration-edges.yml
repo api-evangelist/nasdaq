@@ -1,4 +1,54 @@
+generated: '2026-10-19'
+method: searched
+source:
+- https://composio.dev/toolkits/nasdaq
+- https://monid.ai/tools/nasdaq
+checked:
+- https://api.twelvedata.com/exchanges
+- https://composio.dev/toolkits/nasdaq
+- https://monid.ai/tools/nasdaq
+- https://n8n.io/integrations/nasdaq/
+- https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+- https://zapier.com/apps/nasdaq/integrations
+- zoom/integrations/zoom-integration-edges.yml
+summary: null
+marketplace_apps:
+- marketplace: composio
+  channel: agent-gateway
+  app: nasdaq
+  url: https://composio.dev/toolkits/nasdaq
+  identity: action-prefix
+  actions:
+  - key: NASDAQ_GET_ANALYST_RATINGS
+  - key: NASDAQ_GET_DATATABLE
+  - key: NASDAQ_GET_DATATABLE_METADATA
+  - key: NASDAQ_GET_DIVIDEND_HISTORY
+  - key: NASDAQ_GET_REAL_TIME_QUOTE
+  - key: NASDAQ_GET_TABLES_BY_DATE
+  - key: NASDAQ_GET_TABLE_ROW
+- marketplace: monid
+  channel: agent-gateway
+  app: nasdaq
+  url: https://monid.ai/tools/nasdaq
+  identity: slug
 edges:
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/YyXLJTqNRduygW6YYyOPEA
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Nasdaq Boardvantage
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
 - partner_name: ISO 10383 (MIC)
   partner: null
   type: register
@@ -125,9 +175,9 @@ edges:
       legal_name: NASDAQ STOCKHOLM AB
       country: SE
     detected_by: sweep-capital-markets.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   detected_by: sweep-capital-markets.py
-  first_seen: '2026-10-15'
+  first_seen: '2026-10-19'
 - partner_name: Twelve Data
   partner: twelvedata
   partner_match: aggregator
@@ -140,33 +190,9 @@ edges:
   matched_by: mic:XNAS->domain+verified:nasdaq.com
   mic: XNAS
   detected_by: sweep-capital-markets.py
-  first_seen: '2026-10-15'
+  first_seen: '2026-10-19'
   other_mics:
   - XNGS
   - XNMS
   - XNCM
-- partner_name: Zoom (own)
-  partner: zoom
-  partner_match: mirror
-  mirror_match: domain+name-among-holders
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.zoom.us/apps/YyXLJTqNRduygW6YYyOPEA
-  mirror_of: zoom/integrations/zoom-integration-edges.yml
-  apps:
-  - Nasdaq Boardvantage
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Zoom app
-generated: '2026-10-15'
-method: searched
-checked:
-- https://api.twelvedata.com/exchanges
-- https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
-- zoom/integrations/zoom-integration-edges.yml
-source:
-- zoom/integrations/zoom-integration-edges.yml
+templates: []
