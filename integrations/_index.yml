@@ -156,3 +156,30 @@
   relationship: connector-coverage
   status: not-a-workflow
   arazzo: null
+- slug: nasdaq-databricks-marketplace
+  label: Databricks Marketplace
+  partner: databricks
+  partner_name: Databricks Marketplace
+  category: data product listing
+  type: marketplace
+  marketplace: databricks-marketplace
+  channel: distribution
+  evidence: https://marketplace.databricks.com/provider/b9e9b929-aec2-4e5e-a8af-4a2ea2be5aee
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: Databricks Marketplace (marketplace.databricks.com/api/2.0/public-marketplace-providers + public-marketplace-listings)
+    spec_file: null
+    role: data-marketplace-seller
+    registered_name: Nasdaq eVestment
+    matched_domain: nasdaq.com
+    matched_by: domain+name-among-holders
+    listings: 2
+    sample_listings:
+    - Data Link MCP Server
+    - Nasdaq eVestment Next Best Action
+    signal_note: 'participation: the provider lists data products on this marketplace; counts are context'
+    detected_by: sweep-data-marketplaces.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
