@@ -1,4 +1,4 @@
-# Nasdaq (nasdaq)
+# Nasdaq
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,11 +64,128 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Fortune 1000 company Nasdaq. Public API documentation has not yet been catalogued in the API Evangelist network.
+Nasdaq, Inc. operates the Nasdaq stock exchanges and sells market data, index, and financial technology products. Its developer surface is Nasdaq Data Link (data.nasdaq.com): a Tables API (REST, api_key, JSON/XML/CSV, 10,000-row pages with cursor and bulk export), a Bulk Download API, a request-based REST API for real-time and delayed equities, indexes, ETPs and options (Nasdaq Cloud Data Service, OAuth client-credentials, customer-specific base URL), and a Kafka-based Streaming API delivered through first-party Java and Python SDKs.
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=nasdaq-api-evangelist&utm_content=repo)
+**Areas:** Data Marketplace · Financial Data · Fortune 1000 · Kafka · Market Data · Stock Exchange · Streaming
 
-## Timestamps
+## Nasdaq on APIs.io
 
-- **Created:** 2026-05-05
-- **Modified:** 2026-05-05
+Everything profiled for Nasdaq is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nasdaq/](https://apis.io/providers/nasdaq/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Nasdaq Cloud Data Service (NCDS) — Kafka Streams](https://apis.io/apis/nasdaq/nasdaq-cloud-data-service-ncds-kafka-streams/) — Real-time Nasdaq market data delivered over Apache Kafka (TLS) with SASL/OAUTHBEARER authentication against a Keycloak pro-realm token endpoint. Topics…
+- [Nasdaq Data Link Tables API](https://apis.io/apis/nasdaq/nasdaq-data-link-tables-api/) — REST access to Nasdaq Data Link tabular datasets: GET /api/v3/datatables/{datatable_code}.{format} with row and column filters (qopts.columns), cursor…
+- [Nasdaq Data Link Bulk Download API](https://apis.io/apis/nasdaq/nasdaq-data-link-bulk-download-api/) — Asynchronous bulk download of Nasdaq Data Link tables: GET /api/v1/bulkdownloads/{datatable_code} with row filters returns a job (PENDING, RUNNING,…
+- [Nasdaq Cloud Data Service (NCDS) REST API](https://apis.io/apis/nasdaq/nasdaq-cloud-data-service-ncds-rest-api/) — Request-based REST API for real-time and delayed Nasdaq, BX, PSX and CQT equities (last sale, last trade, last quote, snapshot, trends, bars), indexes, ETPs…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Nasdaq Cloud Data Service (NCDS) — Kafka Streams](https://apis.io/asyncapis/nasdaq/nasdaq-asyncapi/)
+
+#### Event channels (8)
+
+Individual events and webhooks the provider emits.
+
+- [{entitledTopic}](https://apis.io/channels/nasdaq/entitledtopic/)
+- [GIDS](https://apis.io/channels/nasdaq/gids/)
+- [NEWS-PRO-GLOBAL](https://apis.io/channels/nasdaq/news-pro-global/)
+- [NLSCTA](https://apis.io/channels/nasdaq/nlscta/)
+- [NLSPLUS-CTA-V4](https://apis.io/channels/nasdaq/nlsplus-cta-v4/)
+- [NLSPLUS-UTP-V4](https://apis.io/channels/nasdaq/nlsplus-utp-v4/)
+- [NLSUTP](https://apis.io/channels/nasdaq/nlsutp/)
+- [UTPBIN-UF30](https://apis.io/channels/nasdaq/utpbin-uf30/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Nasdaq — asyncapi rules](https://apis.io/rules/nasdaq/nasdaq-asyncapi-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Nasdaq Authentication](https://apis.io/security/nasdaq/nasdaq-authentication/)
+- [Nasdaq Domain Security](https://apis.io/security/nasdaq/nasdaq-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Nasdaq Plans Pricing](https://apis.io/plans/nasdaq/nasdaq-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Nasdaq Rate Limits](https://apis.io/rate-limits/nasdaq/nasdaq-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.nasdaq.com/)
+- [Documentation](https://www.nasdaq.com/products/data/data-link/api)
+- [Privacy policy](https://www.nasdaq.com/privacy-statement)
+- [GitHub](https://github.com/Nasdaq)
+- [Status](https://status.data.nasdaq.com/)
+
+## API Evangelist rating
+
+**Kin Score 39.0** — thin · rubric 0.24.0 · scored 2026-10-20
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 46.9 |
+| Contract governance | 13.6 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 10.5 |
+
+**Agent readiness 24.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 20.4** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nasdaq/](https://apis.io/providers/nasdaq/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Nasdaq: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nasdaq/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
